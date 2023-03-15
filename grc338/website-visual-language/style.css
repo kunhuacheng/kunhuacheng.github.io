@@ -12,6 +12,7 @@ div.home-container {
 	position: relative;
 	min-height: 100vh;
 	margin: auto;
+	max-width: 80em;
 }
 
 div.container { 
@@ -172,9 +173,7 @@ article {
 		max-width: 45%;
 		margin: auto;
 	}
-	div.container{
-		margin: 0em 5em;
-	}
+
 	body{
 		background-color: rgb(244, 244, 244);
 	}
