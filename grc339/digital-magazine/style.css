@@ -2,10 +2,26 @@
 
 body {
     font-family: "canto", serif;
-    background-color: rgb(228, 238, 253);
+    background-color: rgb(251, 250, 246);
 }
+div.container {
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+section{
+    max-width: 40em;
+    margin: 0 auto 3em;
+}
+header {
+	padding: .5em .5em .5em 0em;
+	}
+
 nav ul  {
-    text-align: center;
+    font-family: "questa-grande", serif;
+    font-weight: 400;
+    font-style: normal;     
+    text-align: left;
     }
     
 ul li 	{
@@ -15,34 +31,36 @@ nav ul li {
     display: inline;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-bottom: 1.3em;
 	}
 	
 nav ul li a {
-	color: rgb(150, 152, 204);
-	padding: .5em .4em .4em;
+	color: rgb(131, 123, 173);
+	padding: 0em 1em 0em 0em;
 	}
-
+    
+    
 a {
     text-decoration: none;
+    height: 0;
     }
 
-div.container {
-    max-width: 40em;
-    margin: auto;
-}
+
 h1 {
-	width: 5em;
-    margin: auto;
+	width: 4em;
+    margin: 0em 0em 0em 0em;
 	}
+
 h3{
     color:rgb(74, 91, 132);
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-style: normal;
 }
+
 p{
+    font-size: 1em;
     color:rgb(46, 46, 56);
 }
+
 figure {
     margin: 0;
 }
@@ -52,6 +70,71 @@ img {
 }
 
 ul {
-    list-style-type: none;
     padding: 0;
 }
+
+@media screen and (min-width: 60em) {
+    div.container {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        grid-gap: 0 1em;
+    }
+    header{
+        grid-column: 1/4;
+    }
+    main{
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 0 1em;
+     }
+    aside{
+        grid-column: 3/4;
+        column-width: 15em;
+     }
+    section.mainstory {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory figure{
+        flex: 1 0 8em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory figure div{
+        flex: 1 0 0em;
+        background-image: url(images/dance2.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    section.mainstory figure div a{
+        height: 100%;
+        opacity: 0%;
+    }
+
+    section.mainstory figure figcaption{
+        flex: 0 0 0em;
+        text-decoration: none;
+    }
+        
+    section.mainstory h3 {
+        flex: 0 0 auto;
+        margin: 0 0 0 0;
+        
+    }
+
+    section.mainstory p{
+        flex: 0 0 auto;
+    }
+
+    article{
+        grid-column: 1/3;
+    }
+}
+
