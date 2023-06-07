@@ -117,7 +117,76 @@ input:nth-of-type(8):checked ~ main figure:nth-of-type(8){
     opacity: 1;
 }
 
-div.container-newsletter{
+
+
+@media screen and (min-width: 50em) {
+    div.container {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        grid-gap: 0 4em;
+    }
+    header{
+        grid-column: 1/4;
+    }
+    main.index{
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 0 4em;
+     }
+    aside{
+        grid-column: 3/4;
+        column-width: 15em;
+     }
+    section.mainstory {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory figure{
+        flex: 1 0 8em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory figure div{
+        flex: 1 0 0em;
+        background-image: url(images/dance2.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    section.mainstory figure div a{
+        height: 100%;
+        opacity: 0%;
+    }
+
+    section.mainstory figure figcaption{
+        flex: 0 0 0em;
+        text-decoration: none;
+    }
+        
+    section.mainstory h3 {
+        flex: 0 0 auto;
+        margin: 0 0 0 0;
+        
+    }
+
+    section.mainstory p{
+        flex: 0 0 auto;
+    }
+
+    article{
+        grid-column: 1/3;
+        max-width: 50em;
+        padding-left: 10em;
+    }
+
+
+    div.container-newsletter{
     max-width: 80em;
     margin: 1em;
     padding: 1em;
@@ -189,72 +258,6 @@ section.area {
     margin-bottom: 1em;
 }
 
-
-@media screen and (min-width: 60em) {
-    div.container {
-        display: grid;
-        grid-template-columns: 3fr 3fr;
-        grid-gap: 0 4em;
-    }
-    header{
-        grid-column: 1/4;
-    }
-    main.index{
-        grid-column: 1/3;
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-gap: 0 4em;
-     }
-    aside{
-        grid-column: 3/4;
-        column-width: 15em;
-     }
-    section.mainstory {
-        grid-column: 2/4;
-        grid-row: 1/3;
-        display: flex;
-        flex-direction: column;
-    }
-
-    section.mainstory figure{
-        flex: 1 0 8em;
-        display: flex;
-        flex-direction: column;
-    }
-
-    section.mainstory figure div{
-        flex: 1 0 0em;
-        background-image: url(images/dance2.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    section.mainstory figure div a{
-        height: 100%;
-        opacity: 0%;
-    }
-
-    section.mainstory figure figcaption{
-        flex: 0 0 0em;
-        text-decoration: none;
-    }
-        
-    section.mainstory h3 {
-        flex: 0 0 auto;
-        margin: 0 0 0 0;
-        
-    }
-
-    section.mainstory p{
-        flex: 0 0 auto;
-    }
-
-    article{
-        grid-column: 1/3;
-        max-width: 50em;
-        padding-left: 10em;
-    }
 
 }
 
